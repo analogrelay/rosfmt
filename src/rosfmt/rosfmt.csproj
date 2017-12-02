@@ -19,4 +19,8 @@
     <PackageReference Include="Microsoft.Build.Tasks.Core" Version="15.5.179" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Rosfmt.Engine\Rosfmt.Engine.csproj" />
+  </ItemGroup>
+
 </Project>

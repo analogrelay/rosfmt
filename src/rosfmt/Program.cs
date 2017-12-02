@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Formatting;
+using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Formatting;
 using Microsoft.CodeAnalysis.Host;
 using Microsoft.CodeAnalysis.Host.Mef;
@@ -19,7 +22,7 @@ namespace roslint
         {
             if (args.Length < 1)
             {
-                return Fail("Usage: roslint <csproj-or-sln>");
+                return Fail("Usage: rosfmt <csproj-or-sln>");
             }
 
             var target = Path.GetFullPath(args[0]);
